@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  background: #120f1f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,12 +9,18 @@ body {
 }
 
 .calculatrice {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  padding: 20px;
   width: 400px;
   max-width: 95%;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid orangered;
+  background: rgba(18, 15, 31, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    -3px -3px 7px black inset,
+    3px 3px 5px black inset,
+    0 0 20px orangered;
 }
 
 .résultat input {
@@ -25,8 +31,10 @@ body {
   border: none;
   border-radius: 10px;
   padding: 10px;
-  background: #f3f3f3;
+  background: #1c1c1c;
+  color: #fff;
   margin-bottom: 15px;
+  box-shadow: 0 0 10px orangered inset;
 }
 
 .buttons {
@@ -40,28 +48,34 @@ button {
   font-size: 18px;
   border: none;
   border-radius: 10px;
-  background: #4facfe;
+  background: #222;
   color: #fff;
   cursor: pointer;
-  transition: transform 0.2s, background 0.3s;
+  transition: transform 0.2s, box-shadow 0.3s, color 0.3s;
 }
 
 button:hover {
   transform: scale(1.05);
-  background: #00c6fb;
+  color: orangered;
+  box-shadow: 0 0 12px orangered;
 }
 
 .parametres {
   margin-top: 15px;
   font-size: 14px;
+  color: #fff;
 }
 
 #graph {
   margin-top: 20px;
   width: 100%;
   height: 200px;
+  background: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 15px orangered inset;
 }
 
+/* Responsive mobile */
 @media (max-width: 600px) {
   .calculatrice {
     width: 100%;
