@@ -29,10 +29,14 @@ body {
   margin-bottom: 15px;
 }
 
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
 button {
-  width: 22%;
   height: 60px;
-  margin: 5px;
   font-size: 18px;
   border: none;
   border-radius: 10px;
@@ -45,12 +49,6 @@ button {
 button:hover {
   transform: scale(1.05);
   background: #00c6fb;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .parametres {
@@ -73,8 +71,10 @@ button:hover {
     font-size: 18px;
     height: 50px;
   }
+  .buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
   button {
-    width: 45%;
     height: 50px;
     font-size: 16px;
   }

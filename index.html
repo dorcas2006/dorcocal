@@ -1,87 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculatrice Scientifique</title>
+  <title>Calculatrice</title>
   <link rel="stylesheet" href="calculatrice.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="calculatrice.js" defer></script>
 </head>
 <body>
   <div class="calculatrice">
-    <p class="info"></p>
-    <form onsubmit="return false;"> 
-      <div class="résultat">
-        <input type="text" id="fenetre" readonly>
-      </div>
-
-     
-      <div class="buttons chiffres">
-        <button type="button" onclick="val('7')">7</button>
-        <button type="button" onclick="val('8')">8</button>
-        <button type="button" onclick="val('9')">9</button>
-        <button type="button" onclick="val('+')">+</button>
-
-        <button type="button" onclick="val('4')">4</button>
-        <button type="button" onclick="val('5')">5</button>
-        <button type="button" onclick="val('6')">6</button>
-        <button type="button" onclick="val('-')">-</button>
-
-        <button type="button" onclick="val('1')">1</button>
-        <button type="button" onclick="val('2')">2</button>
-        <button type="button" onclick="val('3')">3</button>
-        <button type="button" onclick="val('*')">*</button>
-
-        <button type="button" onclick="val('0')">0</button>
-        <button type="button" onclick="val('.')">.</button>
-        <button type="button" onclick="val('/')">/</button>
-        <button type="button" onclick="calcul()">=</button>
-      </div>
-
-      
-      <div class="buttons scientifique">
-        <button type="button" onclick="sinus()">sin</button>
-        <button type="button" onclick="cosinus()">cos</button>
-        <button type="button" onclick="tangente()">tan</button>
-        <button type="button" onclick="racine()">√</button>
-
-        <button type="button" onclick="logarithme()">log</button>
-        <button type="button" onclick="puissance2()">x²</button>
-        <button type="button" onclick="inverse()">1/x</button>
-        <button type="button" onclick="pourcentage()">%</button>
-      </div>
-
-     
-      <div class="buttons special">
-        <button type="button" onclick="val('(')">(</button>
-        <button type="button" onclick="val(')')">)</button>
-        <button type="button" onclick="backspace()">←</button>
-        <button type="button" onclick="suppr()">suppr</button>
-
-        <button type="button" onclick="startVoice()">🎤</button>
-        <button type="button" onclick="plotSin()">sin(x)</button>
-        <button type="button" onclick="plotCos()">cos(x)</button>
-        <button type="button" onclick="plotTan()">tan(x)</button>
-      </div>
-    </form>
-
-   
-    <div class="parametres">
-      <label>
-        <input type="checkbox" checked onchange="enableGraph=this.checked">
-        Activer graphes
-      </label>
-      <label>
-        <input type="checkbox" checked onchange="enableSound=this.checked">
-        Activer sons
-      </label>
+    <div class="résultat">
+      <input type="text" id="fenetre" readonly>
+      <div class="info"></div>
     </div>
+
+    <div class="buttons">
+      <!-- Ligne 1 -->
+      <button onclick="val('7')">7</button>
+      <button onclick="val('8')">8</button>
+      <button onclick="val('9')">9</button>
+      <button onclick="val('+')">+</button>
+
+      <!-- Ligne 2 -->
+      <button onclick="val('4')">4</button>
+      <button onclick="val('5')">5</button>
+      <button onclick="val('6')">6</button>
+      <button onclick="val('-')">-</button>
+
+      <!-- Ligne 3 -->
+      <button onclick="val('1')">1</button>
+      <button onclick="val('2')">2</button>
+      <button onclick="val('3')">3</button>
+      <button onclick="val('*')">*</button>
+
+      <!-- Ligne 4 -->
+      <button onclick="val('0')">0</button>
+      <button onclick="val('.')">.</button>
+      <button onclick="val('/')">/</button>
+      <button onclick="calcul()">=</button>
+
+      <!-- Fonctions scientifiques -->
+      <button onclick="sinus()">sin</button>
+      <button onclick="cosinus()">cos</button>
+      <button onclick="tangente()">tan</button>
+      <button onclick="racine()">√</button>
+
+      <button onclick="logarithme()">log</button>
+      <button onclick="puissance2()">x²</button>
+      <button onclick="inverse()">1/x</button>
+      <button onclick="pourcentage()">%</button>
+
+      <!-- Contrôles -->
+      <button onclick="suppr()">C</button>
+      <button onclick="backspace()">⌫</button>
+      <button onclick="startVoice()">🎤</button>
+      <button onclick="plotSin()">📈</button>
+    </div>
+
+    <canvas id="graph"></canvas>
   </div>
-
-  
-  <canvas id="graph"></canvas>
-
-  <script src="calculatrice.js"></script>
 </body>
 </html>
