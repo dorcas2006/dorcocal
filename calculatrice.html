@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,12 +11,12 @@
 <body>
   <div class="calculatrice">
     <p class="info"></p>
-    <form onsubmit="return false;"> <!-- empêche tout submit -->
+    <form onsubmit="return false;"> 
       <div class="résultat">
         <input type="text" id="fenetre" readonly>
       </div>
 
-      <!-- Bloc chiffres et opérateurs -->
+     
       <div class="buttons chiffres">
         <button type="button" onclick="val('7')">7</button>
         <button type="button" onclick="val('8')">8</button>
@@ -38,7 +39,7 @@
         <button type="button" onclick="calcul()">=</button>
       </div>
 
-      <!-- Bloc scientifique -->
+      
       <div class="buttons scientifique">
         <button type="button" onclick="sinus()">sin</button>
         <button type="button" onclick="cosinus()">cos</button>
@@ -51,7 +52,7 @@
         <button type="button" onclick="pourcentage()">%</button>
       </div>
 
-      <!-- Bloc spécial -->
+     
       <div class="buttons special">
         <button type="button" onclick="val('(')">(</button>
         <button type="button" onclick="val(')')">)</button>
@@ -65,7 +66,7 @@
       </div>
     </form>
 
-    <!-- Paramètres -->
+   
     <div class="parametres">
       <label>
         <input type="checkbox" checked onchange="enableGraph=this.checked">
@@ -78,7 +79,7 @@
     </div>
   </div>
 
-  <!-- Canvas pour les courbes -->
+  
   <canvas id="graph"></canvas>
 
   <script src="calculatrice.js"></script>

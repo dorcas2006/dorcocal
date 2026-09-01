@@ -1,3 +1,4 @@
+
 const info = document.querySelector('.info');
 const fenetre = document.getElementById("fenetre"); // champ résultat
 
@@ -82,3 +83,4 @@ function playSound(type) {
   else if (type === "error") audio = new Audio("error.mp3");
   if (audio) audio.play();
 }
+
