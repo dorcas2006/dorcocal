@@ -11,9 +11,9 @@ Une calculatrice moderne développée en **HTML, CSS et JavaScript**, avec un de
 - Effets visuels modernes : ombres, halo lumineux orange, animations au survol
 
 ## 🚀 Démo en ligne
-👉 [Voir la calculatrice](https://ton-pseudo.github.io/nom-du-depot/)
+👉 [Voir la calculatrice](https://dorcas2006.github.io/dorcocal/)
 
 ## 📂 Installation
 Clonez le projet :
 ```bash
-git clone https://github.com/ton-pseudo/nom-du-depot.git
+git clone https://github.com/dorcas2006/dorcocal.git
